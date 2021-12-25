@@ -3,7 +3,8 @@
     <div>
       Vue Component Communication
     </div>
-    <Total :number_1="num_1" :number_2="num_2"/>
+    <Total :number_1="num_1" :number_2="num_2" @total="incomingTotal($event)"/>
+    Total: {{total}}
   </div>
   
 </template>
@@ -16,7 +17,13 @@ export default {
   data(){
     return{
       num_1:100,
-      num_2:200
+      num_2:200,
+      total:0
+    }
+  },
+  methods:{
+    incomingTotal(total){
+      this.total = total
     }
   },
   components: {
