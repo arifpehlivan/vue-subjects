@@ -1,15 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div>
+      Vue Component Communication
+    </div>
+    <Total :number_1="num_1" :number_2="num_2" @total="incomingTotal($event)"/>
+    Total: {{total}}
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Total from './components/Total.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      num_1:100,
+      num_2:200,
+      total:0
+    }
+  },
+  methods:{
+    incomingTotal(total){
+      this.total = total
+    }
+  },
   components: {
-    HelloWorld
+    Total
   }
 }
 </script>
