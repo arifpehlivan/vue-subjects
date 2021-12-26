@@ -9,4 +9,6 @@
 ## Component
 ### dynamic component
 ## Computed Watch
+## Lifecycle
+### beforeCreate created mounted beforeUpdate updated beforeDestroy destroyed
 
