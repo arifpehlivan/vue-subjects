@@ -1,17 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    Vue Lifecycle
+    <input v-model="text">
+    {{text}}
+    <button @click="$destroy()">Destroy</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return{
+      text: ""
+    }
+  },
+  beforeCreate(){
+    console.log("Vue oluşturulmadan önce")
+  },
+  created(){
+    console.log("Vue oluşturuldu")
+  },
+  mounted(){
+    console.log("Vue oluşturuldu ve doma bağlandı")
+  },
+  beforeUpdate(){
+    console.log("Dom güncellenmeden önce")
+  },
+  updated(){
+    console.log("Doma render edildi")
+  },
+  beforeDestroy(){
+    console.log("Yok edilmeden önce")
+  },
+  destroyed(){
+    console.log("Yok edildi")
   }
 }
 </script>
