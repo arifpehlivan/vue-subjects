@@ -11,4 +11,6 @@
 ## Computed Watch
 ## Lifecycle
 ### beforeCreate created mounted beforeUpdate updated beforeDestroy destroyed
+## Filters Stacic File
+
 
