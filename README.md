@@ -16,5 +16,6 @@
 ### transfer props without vuex
 ### state actions mutations getters
 ## Refs
+## Mixins
 
 
