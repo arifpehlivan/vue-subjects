@@ -6,16 +6,24 @@
     <div>
       <component-c/>
     </div>
-    
+    <button @click="addNumber">Add number</button>
   </div>
 </template>
 
 <script>
 import ComponentA from './components/ComponentA.vue'
 import ComponentC from './components/ComponentC.vue'
+import {mapActions} from 'vuex'
 
 export default {
   name: 'App',
+  methods:{
+    ...mapActions(["addNewNumber"]),
+    addNumber(){
+      // this.$store.dispatch("addNewNumber", 10)
+      this.addNewNumber(10)
+    }
+  },
   data(){
     return{
       name: 'Vue'

@@ -1,6 +1,6 @@
 <template>
   <div>
-      Component C
+      Component C {{$store.getters.getName}}
   </div>
 </template>
 
