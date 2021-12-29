@@ -14,5 +14,6 @@
 ## Filters Stacic File
 ## Vuex
 ### transfer props without vuex
+### state actions mutations getters
 
 
