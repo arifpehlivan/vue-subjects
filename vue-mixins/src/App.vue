@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    
+    Vue
+    <div>
+      <ComponentA/>
+    </div>
+    <div>
+      <ComponentB/>
+    </div>
   </div>
 </template>
 
 <script>
-
-
+import ComponentA from './components/ComponentA.vue'
+import ComponentB from './components/ComponentB.vue'
 export default {
+  components: { ComponentA, ComponentB },
   name: 'App',
 
 }
