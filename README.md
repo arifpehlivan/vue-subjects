@@ -12,5 +12,7 @@
 ## Lifecycle
 ### beforeCreate created mounted beforeUpdate updated beforeDestroy destroyed
 ## Filters Stacic File
+## Vuex
+### transfer props without vuex
 
 
