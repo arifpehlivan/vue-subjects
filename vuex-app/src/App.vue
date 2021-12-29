@@ -1,16 +1,29 @@
 <template>
   <div id="app">
+    <div>
+      <component-a :name="name"/>
+    </div>
+    <div>
+      <component-c/>
+    </div>
     
   </div>
 </template>
 
 <script>
-
+import ComponentA from './components/ComponentA.vue'
+import ComponentC from './components/ComponentC.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      name: 'Vue'
+    }
+  },
   components: {
-    HelloWorld
+    ComponentA,
+    ComponentC
   }
 }
 </script>
